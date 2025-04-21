@@ -25,6 +25,8 @@ p{
     
 }
 
+
+
 @media (max-width:1630px)  {
     .but{
         width: 30%;
@@ -37,6 +39,7 @@ p{
         width: 40%;
         height: 50px;
     }
+
 }
 
 @media (max-width:290px)  {
