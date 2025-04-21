@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM EXPRESS</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class=" container-fluid  col-10  col-lg-7 mx-auto mt-lg-4 mt-5 p-lg-4 p-2 shadow rounded-3 pt-lg-5 py-4 px-4 big" style="background: linear-gradient(135deg, blue, gold);">
+
+    <h2 class="text-center text-decoration-underline text-white ">SAM EXPRESS</h2>
+
+
+    <input type="text" id="item" placeholder="Input your item" class="form-control  shadow-none mt-lg-4 mt-4 my-2">
+
+    <button  onclick="addLast()" class="btn btn-sm btn-dark my-3 w-100 rounded-2 ">ADD</button>
+
+    <!-- <div id="result"  class="col-lg-6  col-12  text-black rounded-3 btn  btn-outline-success w-100 my-3" style="width: 520px;">No items yet</div>  -->
+
+    <table id="tab" class="table table-bordered table-center table-dark "  style="font-family: Arial, Helvetica, sans-serif; text-align: center; border: 2px solid white; margin-top: 20px;">
+    <tr>
+        <th class="" style="background-color: rgb(76, 0, 255);color: white; font-family: Arial, Helvetica, sans-serif;text-align: center;border: 2px solid white; width: 30%;">S/N</th>
+        <th style="background-color: rgb(76, 0, 255);color: white; font-family: Arial, Helvetica, sans-serif; text-align: center; border: 2px solid white;">Item</th>
+    </tr>
+<tbody id="tb"></tbody>
+</table>
+    
+    <p style="display: none; height: 40px;" id="errorMsg" class="alert alert-danger text-center pt-2 animate__shakeX" >Dont be silly, fill the input 👿😠😡🤬</p>
+
+
+    <div class="row justify-content-center gap-lg-4 gap-4 mt-lg-4">
+        <button id="btnDelete" style="display: none;" onclick="deleteItem()"  class="btn btn-sm btn-danger my-lg-2 my-1 col-lg-2 col-2  rounded-2 but  " >Delete any item</button>
+
+        <button id="btnAddBegin" style="display: none;" onclick="addBegin()"  class="btn btn-sm btn-success my-lg-2 my-1 col-lg-2 col-2  rounded-2 but  ">Add at the start</button>
+
+        <button id="btnRemoveBegin" style="display: none;" onclick="removeBegin()"  class="btn btn-sm btn-warning my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-black but  ">Remove the first item</button>
+
+        <button id="btnRemoveLast" style="display: none;" onclick="removeLast()"  class="btn btn-sm btn-primary my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-black but  ">Remove the last item</button>
+
+        <button id="btnEditItem" style="display: none;" onclick="editItem()"  class="btn btn-sm btn-secondary my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-white but  ">Edit your  item</button>
+
+        <button id="btnClearCart" style="display: none;" onclick="clearCart()"  class="btn btn-sm btn-danger my-lg-2 my-1 col-lg-2 col-2  rounded-2 but  ">Delete All Items</button>
+    </div> 
+
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
