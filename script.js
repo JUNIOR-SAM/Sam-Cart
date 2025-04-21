@@ -14,6 +14,11 @@ const addLast = () => {
     document.getElementById("item").value = ""; 
     console.log(cart);
 
+    if (cart.length === 1) {
+      document.getElementById("placeholderText").style.display = "none";
+      document.getElementById("tab").style.display = "table";
+    }
+
     if (cart.length >= 1) {
       btnDelete.style.display = "block";
       btnAddBegin.style.display = "block";
@@ -45,6 +50,8 @@ const displayItem = () => {
     btnRemoveLast.style.display = "none";
     btnEditItem.style.display = "none";
     btnClearCart.style.display = "none";
+    document.getElementById("tab").style.display = "none";
+    document.getElementById("placeholderText").style.display = "block";
   }
   
 };

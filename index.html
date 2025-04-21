@@ -20,6 +20,8 @@
 
     <!-- <div id="result"  class="col-lg-6  col-12  text-black rounded-3 btn  btn-outline-success w-100 my-3" style="width: 520px;">No items yet</div>  -->
 
+    <p id="placeholderText" class="text-center text-white  btn btn-outline-dark mt-3 ms-5" style="width: 980px;">No items in the cart yet. Add your first item!</p>
+
     <table id="tab" class="table table-bordered table-center table-dark "  style="font-family: Arial, Helvetica, sans-serif; text-align: center; border: 2px solid white; margin-top: 20px;">
     <tr>
         <th class="" style="background-color: rgb(76, 0, 255);color: white; font-family: Arial, Helvetica, sans-serif;text-align: center;border: 2px solid white; width: 30%;">S/N</th>
@@ -34,11 +36,11 @@
     <div class="row justify-content-center gap-lg-4 gap-4 mt-lg-4">
         <button id="btnDelete" style="display: none;" onclick="deleteItem()"  class="btn btn-sm btn-danger my-lg-2 my-1 col-lg-2 col-2  rounded-2 but  " >Delete any item</button>
 
-        <button id="btnAddBegin" style="display: none;" onclick="addBegin()"  class="btn btn-sm btn-success my-lg-2 my-1 col-lg-2 col-2  rounded-2 but  ">Add at the start</button>
+        <button id="btnAddBegin" style="display: none;" onclick="addBegin()"  class="btn btn-sm btn-success my-lg-2 my-1 col-lg-2 col-2  rounded-2 but  ">Add item to the start</button>
 
-        <button id="btnRemoveBegin" style="display: none;" onclick="removeBegin()"  class="btn btn-sm btn-warning my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-black but  ">Remove the first item</button>
+        <button id="btnRemoveBegin" style="display: none;" onclick="removeBegin()"  class="btn btn-sm btn-warning my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-black but  ">Delete first item</button>
 
-        <button id="btnRemoveLast" style="display: none;" onclick="removeLast()"  class="btn btn-sm btn-primary my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-black but  ">Remove the last item</button>
+        <button id="btnRemoveLast" style="display: none;" onclick="removeLast()"  class="btn btn-sm btn-primary my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-black but  ">Delete last item</button>
 
         <button id="btnEditItem" style="display: none;" onclick="editItem()"  class="btn btn-sm btn-secondary my-lg-2 my-1 col-lg-2 col-2  rounded-2 text-white but  ">Edit your  item</button>
 
