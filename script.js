@@ -1,33 +1,30 @@
 const cart = [];
-// const regex = /\S+/;
-// const itemInput = document.getElementById("item").value.trim();
-
-
 
 const addLast = () => {
+  const itemValue = item.value.trim(); 
+  const hasDigit = /\d/;
 
-  if (!item.value||  item.value.trim() ||  === "") {
-    errorMsg.style.display = "block"
+  if (!itemValue || hasDigit.test(itemValue)) {
+    errorMsg.style.display = "block";
+    errorMsg.textContent = "Digits are not allowed. Please enter valid text.";
     document.getElementById("item").value = "";
   } else {
-    errorMsg.style.display = "none"
-    cart.push(item.value);
-    document.getElementById("item").value = "";
+    errorMsg.style.display = "none"; 
+    cart.push(itemValue); 
+    document.getElementById("item").value = ""; 
     console.log(cart);
-    if (cart.length >= 1){
-      btnDelete.style.display = 'block'
-      btnAddBegin.style.display = 'block'
-      btnRemoveBegin.style.display = 'block'
-      btnRemoveLast.style.display = 'block'
-      btnEditItem.style.display = 'block'
-      btnClearCart.style.display = 'block'
-      // tab.style.display = 'block'
-      // tab.style.display = 'block'
+
+    if (cart.length >= 1) {
+      btnDelete.style.display = "block";
+      btnAddBegin.style.display = "block";
+      btnRemoveBegin.style.display = "block";
+      btnRemoveLast.style.display = "block";
+      btnEditItem.style.display = "block";
+      btnClearCart.style.display = "block";
+      document.getElementById("tab").style.display = "table";
     }
 
-
-  displayItem()
-
+    displayItem();
   }
 };
 
