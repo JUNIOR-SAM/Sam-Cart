@@ -133,14 +133,14 @@ const editItem = () => {
     
     if (isNaN(itemNumber)  || itemNumber < 1 || itemNumber > cart.length) {
       alert("Invalid number. Please enter a valid item number.");
-      // document.getElementById("itemNumber").value = "";
+      document.getElementById("itemNumber").value = "";
     }
 
     const newItem = prompt("Enter the new item to replace it:");
     
     if (!newItem || newItem.trim() === "") {
       alert("Invalid input. Please enter a valid item.");
-      // document.getElementById("itemNumber").value = "";
+      document.getElementById("itemNumber").value = "";
     }
 
     cart.splice(itemNumber - 1, 1, newItem); 
