@@ -38,13 +38,20 @@ const addLast = () => {
 
 const displayItem = () => {
   tb.innerHTML = ""; 
+  
+  for(let i = 0; i < cart.length; i++) {
+    tb.innerHTML += `<tr>
+        <th>${i + 1}</th>
+        <th>${cart[i]}</th>
+    </tr>`;
+  }
 
-  cart.forEach((data, Sam) => {
-  tb.innerHTML += `<tr>
-      <th>${Sam + 1}</th>
-      <th>${data}</th>
-  </tr>`;
-  });
+  // cart.forEach((data, Sam) => {
+  // tb.innerHTML += `<tr>
+  //     <th>${Sam + 1}</th>
+  //     <th>${data}</th>
+  // </tr>`;
+  // });
 
   if (cart.length === 0) {
     btnDelete.style.display = "none";
