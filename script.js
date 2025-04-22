@@ -2,13 +2,16 @@ const cart = [];
 
 const addLast = () => {
   const itemValue = item.value.trim(); 
-  const hasDigit = /\d/;
 
-  if (!itemValue || hasDigit.test(itemValue)) {
+
+  if (itemValue  == "") {
     errorMsg.style.display = "block";
-    errorMsg.textContent = "Digits are not allowed. Please enter valid text.";
     document.getElementById("item").value = "";
-  } else {
+  } 
+
+
+
+  else {
     errorMsg.style.display = "none"; 
     cart.push(itemValue); 
     document.getElementById("item").value = ""; 
@@ -68,7 +71,7 @@ const deleteItem = () => {
     } else if(userValue <= cart.length){
       cart.splice(userValue-1, 1)
       displayItem();
-       
+
       if (cart.length < 1){
         btnDelete.style.display = "none";
       }
@@ -128,7 +131,7 @@ const editItem = () => {
   if (cart.length >= 1) {
     const itemNumber = Number(prompt("Enter the number of the item you want to edit:"));
     
-    if (itemNumber < 1 || itemNumber > cart.length || isNaN(itemNumber)) {
+    if (isNaN(itemNumber)  || itemNumber < 1 || itemNumber > cart.length) {
       alert("Invalid number. Please enter a valid item number.");
       // document.getElementById("itemNumber").value = "";
     }
@@ -140,10 +143,9 @@ const editItem = () => {
       // document.getElementById("itemNumber").value = "";
     }
 
-
     cart.splice(itemNumber - 1, 1, newItem); 
     displayItem(); 
-    alert(`Item number ${itemNumber} has been updated to "${newItem}".`);
+    // alert(`Item number ${itemNumber} has been updated to "${newItem}".`);
   } else {
     alert("The cart is empty. Add items to the cart first.");
   }
@@ -157,7 +159,7 @@ const clearCart = () => {
     if (confirmClear) {
       cart.length = 0; 
       displayItem(); 
-      alert("All items have been deleted from the cart.");
+      // alert("All items have been deleted from the cart.");
       
       btnDelete.style.display = "none";
       btnAddLast.style.display = "none";
